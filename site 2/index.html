@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectNew</title>
+    <link rel="stylesheet" type="text/css" href="BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="BootStrap/css/style.css">
+    <link rel="stylesheet" type="text/css" href="BootStrap/css/toast.css">
+    </head>
+    <body>
+        <!-- Toast de Sucesso -->
+        <div id="toastSuccess" class="alert alert-success text-center" role="alert">
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/2705.png" alt="Sucesso" width="32" height="32" class="me-2 align-middle">
+            <span class="align-middle">Mensagem enviada</span>
+        </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/P.jpg" alt="Logo" width="40" height="40" class="me-2 rounded">
+                ProjectNew
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cards">Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#forms">Formulários</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#components">Componentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Fundadores</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold">Bem-vindo ao ProjectNew!</h1>
+                    <p class="lead"></p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button class="btn btn-primary btn-lg" type="button">Começar</button>
+                        <button class="btn btn-outline-secondary btn-lg" type="button">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="alert alert-info">
+                        <h4 class="alert-heading">Dica!</h4>
+                        <p>Este site demonstra vários componentes do Bootstrap 5, incluindo navegação, cards, formulários, botões e muito mais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section id="cards" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Exemplos de Cards</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Card Básico</h5>
+                            <p class="card-text">Este é um exemplo de card básico do Bootstrap com imagem, título e texto.</p>
+                            <a href="#" class="btn btn-primary">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="card-title mb-0">Card com Header</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Este card possui um header colorido e demonstra diferentes variações de design.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Item 1</li>
+                                <li class="list-group-item">Item 2</li>
+                                <li class="list-group-item">Item 3</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Última atualização há 3 minutos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-heart" style="font-size: 3rem; color: #dc3545;"></i>
+                            <h5 class="card-title mt-3">Card Centrado</h5>
+                            <p class="card-text">Este card demonstra conteúdo centralizado e uso de ícones.</p>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-outline-primary">Esquerda</button>
+                                <button type="button" class="btn btn-outline-primary">Centro</button>
+                                <button type="button" class="btn btn-outline-primary">Direita</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forms Section -->
+    <section id="forms" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Exemplos de Formulários</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Formulário de Contato</h5>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Seu nome completo">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="seu@email.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="assunto" class="form-label">Assunto</label>
+                                    <select class="form-select" id="assunto">
+                                        <option selected>Escolha um assunto</option>
+                                        <option value="1">Dúvida</option>
+                                        <option value="2">Sugestão</option>
+                                        <option value="3">Reclamação</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensagem" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="mensagem" rows="3" placeholder="Sua mensagem aqui..."></textarea>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Quero receber novidades por email
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Input Groups e Validação</h5>
+                        </div>
+                        <div class="card-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="usuario" class="form-label">Usuário</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">@</span>
+                                        <input type="text" class="form-control" id="usuario" required>
+                                        <div class="invalid-feedback">
+                                            Por favor, forneça um nome de usuário válido.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="website" class="form-label">Website</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="website" placeholder="meusite">
+                                        <span class="input-group-text">.com</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="preco" class="form-label">Preço</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">R$</span>
+                                        <input type="number" class="form-control" id="preco">
+                                        <span class="input-group-text">.00</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="arquivo" class="form-label">Arquivo</label>
+                                    <input type="file" class="form-control" id="arquivo">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Tamanho</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="tamanho" id="pequeno" value="pequeno">
+                                        <label class="form-check-label" for="pequeno">
+                                            Pequeno
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="tamanho" id="medio" value="medio">
+                                        <label class="form-check-label" for="medio">
+                                            Médio
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="tamanho" id="grande" value="grande">
+                                        <label class="form-check-label" for="grande">
+                                            Grande
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success">Validar Formulário</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section id="components" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Outros Componentes</h2>
+            
+            <!-- Buttons -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h4>Botões</h4>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-outline-primary">Outline Primary</button>
+                        <button type="button" class="btn btn-outline-secondary">Outline Secondary</button>
+                        <button type="button" class="btn btn-outline-success">Outline Success</button>
+                        <button type="button" class="btn btn-outline-danger">Outline Danger</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h4>Alertas</h4>
+                    <div class="alert alert-primary" role="alert">
+                        Este é um alerta primário - uma mensagem importante!
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Sucesso!</h4>
+                        <p>Operação realizada com sucesso. Você pode continuar navegando.</p>
+                        <hr>
+                        <p class="mb-0">Obrigado por usar nosso sistema!</p>
+                    </div>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Atenção!</strong> Esta é uma mensagem de aviso que pode ser fechada.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Bars -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h4>Barras de Progresso</h4>
+                    <div class="progress mb-3">
+                        <div class="progress-bar" role="progressbar" style="width: 25%"></div>
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%"></div>
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 75%"></div>
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 90%"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Badges and Pills -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h4>Badges e Pills</h4>
+                    <p>
+                        Este é um exemplo de texto com <span class="badge bg-primary">badge</span> e 
+                        <span class="badge bg-secondary">outro badge</span>. 
+                        <span class="badge bg-success">Sucesso</span>
+                        <span class="badge bg-danger">Erro</span>
+                        <span class="badge bg-warning text-dark">Aviso</span>
+                    </p>
+                    <p>
+                        <span class="badge rounded-pill bg-primary">Pill Primary</span>
+                        <span class="badge rounded-pill bg-secondary">Pill Secondary</span>
+                        <span class="badge rounded-pill bg-success">Pill Success</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modals -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h4>Modal</h4>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Abrir Modal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Fundadores do ProjectNew</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="img/P.jpg" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Administrador 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Vitor Lucas</h5>
+                            <p class="text-muted">Diretor</p>
+                            <p class="card-text">...</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-outline-primary btn-sm">LinkedIn</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="img/P.jpg" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Administrador 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Bruno Souza</h5>
+                            <p class="text-muted">...</p>
+                            <p class="card-text">...</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-outline-primary btn-sm">LinkedIn</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="img/P.jpg" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Administrador 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Gabriel Oliveira</h5>
+                            <p class="text-muted">...</p>
+                            <p class="card-text">...</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-outline-primary btn-sm">LinkedIn</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="img/P.jpg" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Administrador 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Joao Guilherme</h5>
+                            <p class="text-muted">...</p>
+                            <p class="card-text">...</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-outline-primary btn-sm">LinkedIn</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Estatísticas da Equipe -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body text-center">
+                            <h4 class="card-title mb-3">Historico do ProjectNew</h4>
+                            <div class="row">
+                                <div class="col-md-3 col-6 mb-3">
+                                    <h3 class="fw-bold">30+</h3>
+                                    <p class="mb-0">Projetos Concluídos</p>
+                                </div>
+                                <div class="col-md-3 col-6 mb-3">
+                                    <h3 class="fw-bold">10+</h3>
+                                    <p class="mb-0">Anos de Experiência</p>
+                                </div>
+                                <div class="col-md-3 col-6 mb-3">
+                                    <h3 class="fw-bold">100+</h3>
+                                    <p class="mb-0">Clientes Satisfeitos</p>
+                                </div>
+                                <div class="col-md-3 col-6 mb-3">
+                                    <h3 class="fw-bold">24/7</h3>
+                                    <p class="mb-0">Suporte Disponível</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 ProjectNew. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Exemplo de Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Aviso!</strong> Dê uma olhada nos portfolio de alguns dos Fundadores,assim sabendo o Email para enviar uma mensagem ou marcar reunião.</p>
+                    <form id="modalForm">
+                        <div class="mb-3">
+                            <label for="modalEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="modalEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalMensagem" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="modalMensagem" rows="3"></textarea>
+                        </div>
+                    </form>
+                    <div id="successMessage" class="text-center" style="display:none;">
+                        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/2705.png" alt="Sucesso" width="80" height="80">
+                        <h5 class="mt-3 text-success">Sucesso!</h5>
+                        <p>Seus dados foram salvos com sucesso.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="btnSalvarModal">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="BootStrap/js/bootstrap.min.js"></script>
+    <script>
+        // Sucesso no modal + Toast
+        document.addEventListener('DOMContentLoaded', function() {
+            var btnSalvar = document.getElementById('btnSalvarModal');
+            var form = document.getElementById('modalForm');
+            var successMsg = document.getElementById('successMessage');
+            var toast = document.getElementById('toastSuccess');
+            var modal = document.getElementById('exampleModal');
+            if (btnSalvar && form && successMsg && toast && modal) {
+                btnSalvar.addEventListener('click', function() {
+                    // Fecha o modal
+                    var modalInstance = bootstrap.Modal.getOrCreateInstance(modal);
+                    modalInstance.hide();
+                    // Resetar formulário/modal
+                    form.style.display = 'block';
+                    successMsg.style.display = 'none';
+                    form.reset();
+                    // Exibe o toast
+                    toast.style.display = 'block';
+                    setTimeout(function() {
+                        toast.style.display = 'none';
+                    }, 3000);
+                });
+            }
+        });
+        // Validação de formulário
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    </body>
+</html>

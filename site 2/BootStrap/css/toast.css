@@ -1,0 +1,10 @@
+/* Notificação de sucesso fixa no topo */
+#toastSuccess {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  min-width: 250px;
+  display: none;
+}
