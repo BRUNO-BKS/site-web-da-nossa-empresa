@@ -7,9 +7,15 @@
     <link rel="stylesheet" type="text/css" href="BootStrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="BootStrap/css/style.css">
     <link rel="stylesheet" type="text/css" href="BootStrap/css/toast.css">
+    <link rel="stylesheet" type="text/css" href="BootStrap/css/aurora-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Three.js para efeito de aurora boreal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     </head>
     <body>
+        <!-- Container global para o efeito de aurora boreal -->
+        <div id="global-aurora-container" class="position-fixed" style="top: 0; left: 0; z-index: -1; pointer-events: none; width: 100vw; height: 100vh; overflow: hidden;"></div>
+        
         <div class="main-content">
         <!-- Toast de Sucesso -->
         <div id="toastSuccess" class="alert alert-success text-center" role="alert">
@@ -52,16 +58,16 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-light py-5">
+    <section id="home" class="position-relative py-5" style="min-height: 100vh;">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold">Bem-vindo ao ProjectNew!</h1>
-                    <p class="lead"></p>
-                    
+                    <h1 class="display-4 fw-bold text-white text-shadow">Bem-vindo ao ProjectNew!</h1>
+                
+                   
                 </div>
-                <div class="col-lg-6">
-                    
+                <div class="col-lg-6 text-center">
+                    <img src="img/P.png" alt="Tecnologia" class="img-fluid rounded shadow floating" style="max-height: 400px;">
                 </div>
             </div>
         </div>
@@ -70,7 +76,7 @@
     <!-- Cards Section -->
     <section id="cards" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Projetos Finalizados da Empresa</h2>
+            <h2 class="text-center mb-5 text-white text-shadow">Projetos Finalizados da Empresa</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card h-100">
@@ -123,7 +129,7 @@
     <!-- Components Section -->
     <section id="components" class="py-5">
         <div class="container">
-            
+            <h2 class="text-center mb-5 text-white text-shadow">Nossos Componentes e Serviços</h2>
             
             <!-- Buttons -->
             <div class="row mb-5">
@@ -166,7 +172,7 @@
     <!-- Seção de Localização -->
     <section id="localizacao" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Nossa Localização</h2>
+            <h2 class="text-center mb-5 text-white text-shadow">Nossa Localização</h2>
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100">
@@ -233,66 +239,90 @@
         </div>
 
         <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5 bg-light">
+    <section id="portfolio" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Fundadores do ProjectNew</h2>
+            <h2 class="text-center mb-5 text-white text-shadow">Fundadores do ProjectNew</h2>
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 text-center">
-                        <img src="img/Diretor.jpg" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Administrador 1">
+                    <div class="card h-100 text-center founder-card">
+                        <img src="img/Diretor.jpg" class="card-img-top mx-auto mt-3 rounded-circle floating" style="width: 120px; height: 120px; object-fit: cover;" alt="Vitor Lucas - Diretor">
                         <div class="card-body">
                             <h5 class="card-title">Vitor Lucas</h5>
-                            <p class="text-muted">Diretor</p>
-                            <p class="card-text">...</p>
+                            <p class="text-primary fw-bold">Diretor Executivo</p>
+                            <p class="card-text">Liderança estratégica e visão inovadora para o crescimento da empresa.</p>
                             <div class="d-flex justify-content-center gap-2">
-                                <a href="https://br.linkedin.com/" target="_blank" class="btn btn-outline-primary btn-sm">LinkedIn</a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Instagram</a>
+                                <a href="https://br.linkedin.com/" target="_blank" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 text-center">
-                        <img src="img/Bruno.jpg" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Administrador 2">
+                    <div class="card h-100 text-center founder-card">
+                        <img src="img/Bruno.jpg" class="card-img-top mx-auto mt-3 rounded-circle floating" style="width: 120px; height: 120px; object-fit: cover;" alt="Bruno Souza - Gerente">
                         <div class="card-body">
                             <h5 class="card-title">Bruno Souza</h5>
-                            <p class="text-muted">Gerente</p>
-                            <p class="card-text">...</p>
+                            <p class="text-success fw-bold">Gerente de Projetos</p>
+                            <p class="card-text">Especialista em gestão de projetos e desenvolvimento de soluções tecnológicas.</p>
                             <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="btn btn-outline-primary btn-sm">LinkedIn</a>
-                                <a href="https://github.com/BRUNO-BKS" target="_blank" class="btn btn-outline-secondary btn-sm">GitHub</a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Instagram</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://github.com/BRUNO-BKS" target="_blank" class="btn btn-outline-secondary btn-sm">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 text-center">
-                        <img src="img/Gabriel.jpg" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Administrador 3">
+                    <div class="card h-100 text-center founder-card">
+                        <img src="img/Gabriel.jpg" class="card-img-top mx-auto mt-3 rounded-circle floating" style="width: 120px; height: 120px; object-fit: cover;" alt="Gabriel Oliveira - Secretário">
                         <div class="card-body">
                             <h5 class="card-title">Gabriel Oliveira</h5>
-                            <p class="text-muted">Secretária</p>
-                            <p class="card-text">...</p>
+                            <p class="text-info fw-bold">Secretário Executivo</p>
+                            <p class="card-text">Organização administrativa e coordenação de processos internos da empresa.</p>
                             <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="btn btn-outline-primary btn-sm">LinkedIn</a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Instagram</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 text-center">
-                        <img src="img/Joao.jpg" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Administrador 4">
+                    <div class="card h-100 text-center founder-card">
+                        <img src="img/Joao.jpg" class="card-img-top mx-auto mt-3 rounded-circle floating" style="width: 120px; height: 120px; object-fit: cover;" alt="João Guilherme - Desenvolvedor">
                         <div class="card-body">
-                            <h5 class="card-title">Joao Guilherme</h5>
-                            <p class="text-muted">Escravo</p>
-                            <p class="card-text">...</p>
+                            <h5 class="card-title">João Guilherme</h5>
+                            <p class="text-warning fw-bold">Desenvolvedor Full-Stack</p>
+                            <p class="card-text">Especialista em desenvolvimento web e mobile com foco em soluções inovadoras.</p>
                             <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="btn btn-outline-primary btn-sm">LinkedIn</a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Instagram</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -418,6 +448,8 @@
     </div>
 
     <script src="BootStrap/js/bootstrap.min.js"></script>
+    <!-- Script do efeito de aurora boreal -->
+    <script src="js/aurora-background.js"></script>
     <script>
         // Sucesso no modal + Toast
         document.addEventListener('DOMContentLoaded', function() {
