@@ -7,26 +7,25 @@
     <link rel="stylesheet" type="text/css" href="BootStrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="BootStrap/css/style.css">
     <link rel="stylesheet" type="text/css" href="BootStrap/css/toast.css">
-    <link rel="stylesheet" type="text/css" href="BootStrap/css/aurora-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Three.js para efeito de aurora boreal -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- Container global para o efeito de aurora boreal -->
-        <div id="global-aurora-container" class="position-fixed" style="top: 0; left: 0; z-index: -1; pointer-events: none; width: 100vw; height: 100vh; overflow: hidden;"></div>
         
         <div class="main-content">
         <!-- Toast de Sucesso -->
-        <div id="toastSuccess" class="alert alert-success text-center" role="alert">
+        <!-- <div id="toastSuccess" class="alert alert-success text-center" role="alert">
             <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/2705.png" alt="Sucesso" width="32" height="32" class="me-2 align-middle">
             <span class="align-middle">Mensagem enviada</span>
-        </div>
+        </div> -->
+        
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="img/P.jpg" alt="Logo" width="40" height="40" class="me-2 rounded">
+                <img src="img/P.jpg" alt="Logo" width="40" height="40" class="me-2 rounded" loading="eager" decoding="async">
                 ProjectNew
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -58,16 +57,156 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="position-relative py-5" style="min-height: 100vh;">
+    <section id="home" class="position-relative py-4" style="min-height: 60vh;">
         <div class="container">
-            <div class="row align-items-center min-vh-100">
+            <div class="row align-items-center" style="min-height: 50vh;">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold text-white text-shadow">Bem-vindo ao ProjectNew!</h1>
-                
-                   
-                </div>
+                    <h2 class="display-4 fw-bold text-white text-shadow">Bem-vindo ao ProjectNew!</h2>
+                </div>                               
                 <div class="col-lg-6 text-center">
-                    <img src="img/P.png" alt="Tecnologia" class="img-fluid rounded shadow floating" style="max-height: 400px;">
+                    <img src="img/P.png" alt="Tecnologia" class="img-fluid rounded floating" style="max-height: 300px;" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre-nos" class="py-5">
+        <div class="container">
+            <!-- Título da Seção -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="section-header">
+                        <span class="section-badge">Nossa História</span>
+                        <h2 class="section-title">Sobre a ProjectNew</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5">
+                    <div class="about-content">
+                        <div class="mission-card">
+                            <div class="mission-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3 class="mission-title">Nossa Missão</h3>
+                            <p class="mission-text">
+                                Somos uma empresa de tecnologia inovadora, especializada em desenvolvimento de soluções digitais que transformam negócios e conectam pessoas.
+                            </p>
+                        </div>
+                        
+                        <div class="vision-card">
+                            <div class="vision-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="vision-title">Nossa Visão</h3>
+                            <p class="vision-text">
+                                Com uma equipe experiente e apaixonada por tecnologia, entregamos projetos de alta qualidade que superam as expectativas dos nossos clientes. Nossa missão é democratizar o acesso à tecnologia de ponta.
+                            </p>
+                        </div>
+
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Qualidade Garantida</h4>
+                                    <p>Padrões internacionais de excelência</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Suporte 24/7</h4>
+                                    <p>Assistência completa sempre disponível</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Tecnologia Avançada</h4>
+                                    <p>Ferramentas de última geração</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Resultados Comprovados</h4>
+                                    <p>Histórico de sucesso comprovado</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="stats-container">
+                        <div class="stats-header">
+                            <h3>Nossos Números</h3>
+                            <p>Resultados que falam por si</p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="row g-4">
+                                <div class="col-6">
+                                    <div class="stat-card enhanced">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-project-diagram"></i>
+                                        </div>
+                                        <div class="stat-number" data-count="30">0</div>
+                                        <div class="stat-label">Projetos Concluídos</div>
+                                        <div class="stat-progress">
+                                            <div class="progress-bar" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="stat-card enhanced">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="stat-number" data-count="10">0</div>
+                                        <div class="stat-label">Anos de Experiência</div>
+                                        <div class="stat-progress">
+                                            <div class="progress-bar" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="stat-card enhanced">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="stat-number" data-count="100">0</div>
+                                        <div class="stat-label">Clientes Satisfeitos</div>
+                                        <div class="stat-progress">
+                                            <div class="progress-bar" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="stat-card enhanced">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="stat-number">24/7</div>
+                                        <div class="stat-label">Suporte Disponível</div>
+                                        <div class="stat-progress">
+                                            <div class="progress-bar" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,46 +215,121 @@
     <!-- Cards Section -->
     <section id="cards" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5 text-white text-shadow">Projetos Finalizados da Empresa</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder">
-                        <div class="card-body">
-                            <h5 class="card-title">Card Básico</h5>
-                            <p class="card-text">Este é um exemplo de card básico do Bootstrap com imagem, título e texto.</p>
-                            <a href="#" class="btn btn-primary">Ver Mais</a>
+            <!-- Header da Seção -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="section-header">
+                        <span class="section-badge">Nossos Projetos</span>
+                        <h2 class="section-title">Projetos Finalizados</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250" alt="Projeto 1" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="action-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="action-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Desenvolvimento Web</div>
+                            <h3 class="project-title">E-commerce Platform</h3>
+                            <p class="project-description">
+                                Plataforma completa de e-commerce com sistema de pagamentos integrado e painel administrativo avançado.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="#" class="btn-project">
+                                    <span>Ver Detalhes</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-success">
-                        <div class="card-header bg-success text-white">
-                            <h5 class="card-title mb-0">Card com Header</h5>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250" alt="Projeto 2" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="action-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="action-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p class="card-text">Este card possui um header colorido e demonstra diferentes variações de design.</p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Item 1</li>
-                                <li class="list-group-item">Item 2</li>
-                                <li class="list-group-item">Item 3</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Última atualização há 3 minutos</small>
+                        <div class="project-content">
+                            <div class="project-category">Mobile App</div>
+                            <h3 class="project-title">Delivery App</h3>
+                            <p class="project-description">
+                                Aplicativo mobile para delivery com geolocalização, chat em tempo real e sistema de avaliações.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Maps API</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="#" class="btn-project">
+                                    <span>Ver Detalhes</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <i class="bi bi-heart" style="font-size: 3rem; color: #dc3545;"></i>
-                            <h5 class="card-title mt-3">Card Centrado</h5>
-                            <p class="card-text">Este card demonstra conteúdo centralizado e uso de ícones.</p>
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-outline-primary">Esquerda</button>
-                                <button type="button" class="btn btn-outline-primary">Centro</button>
-                                <button type="button" class="btn btn-outline-primary">Direita</button>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250" alt="Projeto 3" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="action-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="action-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Sistema Web</div>
+                            <h3 class="project-title">CRM Dashboard</h3>
+                            <p class="project-description">
+                                Dashboard completo de CRM com relatórios avançados, automação de marketing e integração com APIs.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="#" class="btn-project">
+                                    <span>Ver Detalhes</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -241,88 +455,145 @@
         <!-- Portfolio Section -->
     <section id="portfolio" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5 text-white text-shadow">Fundadores do ProjectNew</h2>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 text-center founder-card">
-                        <img src="img/Diretor.jpg" class="card-img-top mx-auto mt-3 rounded-circle floating" style="width: 120px; height: 120px; object-fit: cover;" alt="Vitor Lucas - Diretor">
-                        <div class="card-body">
-                            <h5 class="card-title">Vitor Lucas</h5>
-                            <p class="text-primary fw-bold">Diretor Executivo</p>
-                            <p class="card-text">Liderança estratégica e visão inovadora para o crescimento da empresa.</p>
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="https://br.linkedin.com/" target="_blank" class="btn btn-outline-primary btn-sm">
-                                    <i class="fab fa-linkedin"></i> LinkedIn
-                                </a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">
-                                    <i class="fab fa-instagram"></i> Instagram
-                                </a>
+            <!-- Header da Seção -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="section-header">
+                        <span class="section-badge">Nossa Equipe</span>
+                        <h2 class="section-title">Fundadores do ProjectNew</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="founder-card-modern">
+                        <div class="founder-image">
+                            <img src="img/Diretor.jpg" alt="Vitor Lucas - Diretor" loading="lazy" decoding="async">
+                            <div class="founder-overlay">
+                                <div class="founder-social">
+                                    <a href="https://br.linkedin.com/" target="_blank" class="social-btn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="social-btn">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="social-btn">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="founder-content">
+                            <div class="founder-role">Diretor Executivo</div>
+                            <h3 class="founder-name">Vitor Lucas</h3>
+                            <p class="founder-description">
+                                Liderança estratégica e visão inovadora para o crescimento da empresa.
+                            </p>
+                            <div class="founder-skills">
+                                <span class="skill-tag">Liderança</span>
+                                <span class="skill-tag">Estratégia</span>
+                                <span class="skill-tag">Inovação</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 text-center founder-card">
-                        <img src="img/Bruno.jpg" class="card-img-top mx-auto mt-3 rounded-circle floating" style="width: 120px; height: 120px; object-fit: cover;" alt="Bruno Souza - Gerente">
-                        <div class="card-body">
-                            <h5 class="card-title">Bruno Souza</h5>
-                            <p class="text-success fw-bold">Gerente de Projetos</p>
-                            <p class="card-text">Especialista em gestão de projetos e desenvolvimento de soluções tecnológicas.</p>
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="btn btn-outline-primary btn-sm">
-                                    <i class="fab fa-linkedin"></i> LinkedIn
-                                </a>
-                                <a href="https://github.com/BRUNO-BKS" target="_blank" class="btn btn-outline-secondary btn-sm">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">
-                                    <i class="fab fa-instagram"></i> Instagram
-                                </a>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="founder-card-modern">
+                        <div class="founder-image">
+                            <img src="img/Bruno.jpg" alt="Bruno Souza - Gerente" loading="lazy" decoding="async">
+                            <div class="founder-overlay">
+                                <div class="founder-social">
+                                    <a href="#" class="social-btn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="https://github.com/BRUNO-BKS" target="_blank" class="social-btn">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="social-btn">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="founder-content">
+                            <div class="founder-role">Gerente de Projetos</div>
+                            <h3 class="founder-name">Bruno Souza</h3>
+                            <p class="founder-description">
+                                Especialista em gestão de projetos e desenvolvimento de soluções tecnológicas.
+                            </p>
+                            <div class="founder-skills">
+                                <span class="skill-tag">Gestão</span>
+                                <span class="skill-tag">Projetos</span>
+                                <span class="skill-tag">Tecnologia</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 text-center founder-card">
-                        <img src="img/Gabriel.jpg" class="card-img-top mx-auto mt-3 rounded-circle floating" style="width: 120px; height: 120px; object-fit: cover;" alt="Gabriel Oliveira - Secretário">
-                        <div class="card-body">
-                            <h5 class="card-title">Gabriel Oliveira</h5>
-                            <p class="text-info fw-bold">Secretário Executivo</p>
-                            <p class="card-text">Organização administrativa e coordenação de processos internos da empresa.</p>
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="btn btn-outline-primary btn-sm">
-                                    <i class="fab fa-linkedin"></i> LinkedIn
-                                </a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">
-                                    <i class="fab fa-instagram"></i> Instagram
-                                </a>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="founder-card-modern">
+                        <div class="founder-image">
+                            <img src="img/Gabriel.jpg" alt="Gabriel Oliveira - Secretário" loading="lazy" decoding="async">
+                            <div class="founder-overlay">
+                                <div class="founder-social">
+                                    <a href="#" class="social-btn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="social-btn">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="social-btn">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="founder-content">
+                            <div class="founder-role">Secretário Executivo</div>
+                            <h3 class="founder-name">Gabriel Oliveira</h3>
+                            <p class="founder-description">
+                                Organização administrativa e coordenação de processos internos da empresa.
+                            </p>
+                            <div class="founder-skills">
+                                <span class="skill-tag">Administração</span>
+                                <span class="skill-tag">Organização</span>
+                                <span class="skill-tag">Processos</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 text-center founder-card">
-                        <img src="img/Joao.jpg" class="card-img-top mx-auto mt-3 rounded-circle floating" style="width: 120px; height: 120px; object-fit: cover;" alt="João Guilherme - Desenvolvedor">
-                        <div class="card-body">
-                            <h5 class="card-title">João Guilherme</h5>
-                            <p class="text-warning fw-bold">Desenvolvedor Full-Stack</p>
-                            <p class="card-text">Especialista em desenvolvimento web e mobile com foco em soluções inovadoras.</p>
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="#" class="btn btn-outline-primary btn-sm">
-                                    <i class="fab fa-linkedin"></i> LinkedIn
-                                </a>
-                                <a href="#" class="btn btn-outline-secondary btn-sm">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">
-                                    <i class="fab fa-instagram"></i> Instagram
-                                </a>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="founder-card-modern">
+                        <div class="founder-image">
+                            <img src="img/Joao.jpg" alt="João Guilherme - Desenvolvedor" loading="lazy" decoding="async">
+                            <div class="founder-overlay">
+                                <div class="founder-social">
+                                    <a href="#" class="social-btn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="social-btn">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="social-btn">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="founder-content">
+                            <div class="founder-role">Desenvolvedor Full-Stack</div>
+                            <h3 class="founder-name">João Guilherme</h3>
+                            <p class="founder-description">
+                                Especialista em desenvolvimento web e mobile com foco em soluções inovadoras.
+                            </p>
+                            <div class="founder-skills">
+                                <span class="skill-tag">Desenvolvimento</span>
+                                <span class="skill-tag">Web</span>
+                                <span class="skill-tag">Mobile</span>
                             </div>
                         </div>
                     </div>
@@ -332,34 +603,6 @@
             
             
             
-    <!-- Estatísticas da Equipe -->
-    <div class="row mt-5">
-        <div class="col-12">
-            <div class="card bg-primary text-white">
-                <div class="card-body text-center">
-                    <h4 class="card-title mb-3">Historico do ProjectNew</h4>
-                    <div class="row">
-                        <div class="col-md-3 col-6 mb-3">
-                            <h3 class="fw-bold">30+</h3>
-                            <p class="mb-0">Projetos Concluídos</p>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <h3 class="fw-bold">10+</h3>
-                            <p class="mb-0">Anos de Experiência</p>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <h3 class="fw-bold">100+</h3>
-                            <p class="mb-0">Clientes Satisfeitos</p>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <h3 class="fw-bold">24/7</h3>
-                            <p class="mb-0">Suporte Disponível</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 </section>
 
@@ -369,7 +612,7 @@
             <div class="row align-items-center">
                 <div class="col-12 text-center">
                     <h5 class="mb-0">
-                        <img src="img/P.jpg" alt="Logo" width="30" height="30" class="me-2 rounded">
+                        <img src="img/P.jpg" alt="Logo" width="30" height="30" class="me-2 rounded" loading="lazy" decoding="async">
                         ProjectNew
                     </h5>
                     <p class="mb-0 mt-2 text-muted">&copy; 2025 ProjectNew. Todos os direitos reservados.</p>
@@ -448,8 +691,6 @@
     </div>
 
     <script src="BootStrap/js/bootstrap.min.js"></script>
-    <!-- Script do efeito de aurora boreal -->
-    <script src="js/aurora-background.js"></script>
     <script>
         // Sucesso no modal + Toast
         document.addEventListener('DOMContentLoaded', function() {
@@ -535,4 +776,5 @@
         })();
     </script>
     </body>
+</html>
 </html>

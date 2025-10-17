@@ -75,7 +75,7 @@ class AuroraBackground {
         uniform float iTime;
         uniform vec2 iResolution;
 
-        #define NUM_OCTAVES 3
+        #define NUM_OCTAVES 2 // Reduzido de 3 para 2
 
         float rand(vec2 n) {
           return fract(sin(dot(n, vec2(12.9898, 4.1414))) * 43758.5453);
@@ -106,29 +106,29 @@ class AuroraBackground {
         }
 
         void main() {
-          vec2 shake = vec2(sin(iTime * 1.2) * 0.005, cos(iTime * 2.1) * 0.005);
-          vec2 p = ((gl_FragCoord.xy + shake * iResolution.xy) - iResolution.xy * 0.5) / iResolution.y * mat2(6.0, -4.0, 4.0, 6.0);
+          vec2 shake = vec2(sin(iTime * 0.8) * 0.003, cos(iTime * 1.2) * 0.003); // Reduzido movimento
+          vec2 p = ((gl_FragCoord.xy + shake * iResolution.xy) - iResolution.xy * 0.5) / iResolution.y * mat2(4.0, -3.0, 3.0, 4.0); // Simplificado
           vec2 v;
           vec4 o = vec4(0.0);
 
-          float f = 2.0 + fbm(p + vec2(iTime * 5.0, 0.0)) * 0.5;
+          float f = 1.5 + fbm(p + vec2(iTime * 3.0, 0.0)) * 0.3; // Reduzido movimento
 
-          for (float i = 0.0; i < 35.0; i++) {
-            v = p + cos(i * i + (iTime + p.x * 0.08) * 0.025 + i * vec2(13.0, 11.0)) * 3.5 + vec2(sin(iTime * 3.0 + i) * 0.003, cos(iTime * 3.5 - i) * 0.003);
-            float tailNoise = fbm(v + vec2(iTime * 0.5, i)) * 0.3 * (1.0 - (i / 35.0));
+          for (float i = 0.0; i < 20.0; i++) { // Reduzido de 35 para 20
+            v = p + cos(i * i + (iTime + p.x * 0.05) * 0.02 + i * vec2(10.0, 8.0)) * 2.5 + vec2(sin(iTime * 2.0 + i) * 0.002, cos(iTime * 2.5 - i) * 0.002);
+            float tailNoise = fbm(v + vec2(iTime * 0.3, i)) * 0.2 * (1.0 - (i / 20.0));
             vec4 auroraColors = vec4(
-              0.1 + 0.3 * sin(i * 0.2 + iTime * 0.4),
-              0.3 + 0.5 * cos(i * 0.3 + iTime * 0.5),
-              0.7 + 0.3 * sin(i * 0.4 + iTime * 0.3),
-              0.8
+              0.1 + 0.2 * sin(i * 0.15 + iTime * 0.3),
+              0.3 + 0.4 * cos(i * 0.2 + iTime * 0.4),
+              0.6 + 0.2 * sin(i * 0.3 + iTime * 0.2),
+              0.7
             );
-            vec4 currentContribution = auroraColors * exp(sin(i * i + iTime * 0.8)) / length(max(v, vec2(v.x * f * 0.015, v.y * 1.5)));
-            float thinnessFactor = smoothstep(0.0, 1.0, i / 35.0) * 0.6;
-            o += currentContribution * (1.0 + tailNoise * 0.8) * thinnessFactor;
+            vec4 currentContribution = auroraColors * exp(sin(i * i + iTime * 0.6)) / length(max(v, vec2(v.x * f * 0.01, v.y * 1.2)));
+            float thinnessFactor = smoothstep(0.0, 1.0, i / 20.0) * 0.5;
+            o += currentContribution * (1.0 + tailNoise * 0.6) * thinnessFactor;
           }
 
-          o = tanh(pow(o / 100.0, vec4(1.6)));
-          gl_FragColor = o * 1.5;
+          o = tanh(pow(o / 80.0, vec4(1.4))); // Reduzido de 100 para 80
+          gl_FragColor = o * 1.2; // Reduzido de 1.5 para 1.2
         }
       `,
       transparent: true
@@ -184,11 +184,89 @@ class AuroraBackground {
 
 // Inicializar quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', function() {
+  // Verificar performance do dispositivo
+  function shouldEnableAurora() {
+    // Verificar se é um dispositivo móvel
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    // Verificar se tem GPU adequada
+    const canvas = document.createElement('canvas');
+    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    const hasWebGL = !!gl;
+    
+    // Verificar memória disponível (se suportado)
+    const hasLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
+    
+    // Verificar se o usuário prefere reduzir movimento
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    // Desabilitar em dispositivos móveis, sem WebGL, com pouca memória ou que preferem movimento reduzido
+    return !isMobile && hasWebGL && !hasLowMemory && !prefersReducedMotion;
+  }
+  
   // Aguardar Three.js carregar se não estiver disponível
   function initAurora() {
     if (typeof THREE !== 'undefined') {
-      // Inicializar aurora global para todo o site
-      const globalAurora = new AuroraBackground('global-aurora-container');
+      // Verificar se deve habilitar aurora
+      if (shouldEnableAurora()) {
+        // Inicializar aurora global para todo o site
+        const globalAurora = new AuroraBackground('global-aurora-container');
+        
+        // Adicionar controle de performance
+        let isPaused = false;
+        let lastTime = 0;
+        const targetFPS = 30; // Reduzir FPS para economizar recursos
+        const frameInterval = 1000 / targetFPS;
+        
+        // Pausar animação quando a aba não está visível
+        document.addEventListener('visibilitychange', function() {
+          if (document.hidden) {
+            isPaused = true;
+          } else {
+            isPaused = false;
+            lastTime = Date.now();
+          }
+        });
+        
+        // Pausar animação quando o usuário para de interagir
+        let interactionTimeout;
+        const resetInteraction = () => {
+          isPaused = false;
+          clearTimeout(interactionTimeout);
+          interactionTimeout = setTimeout(() => {
+            isPaused = true;
+          }, 5000); // Pausar após 5 segundos de inatividade
+        };
+        
+        document.addEventListener('mousemove', resetInteraction);
+        document.addEventListener('scroll', resetInteraction);
+        document.addEventListener('touchstart', resetInteraction);
+        
+        // Modificar o método animate para respeitar o FPS e pausar quando necessário
+        const originalAnimate = globalAurora.animate;
+        globalAurora.animate = function() {
+          const animate = () => {
+            const now = Date.now();
+            if (!isPaused && (now - lastTime) >= frameInterval) {
+              const elapsedTime = (Date.now() - this.startTime) / 1000;
+              this.material.uniforms.iTime.value = elapsedTime;
+              this.renderer.render(this.scene, this.camera);
+              lastTime = now;
+            }
+            this.animationId = requestAnimationFrame(animate);
+          };
+          animate();
+        };
+        
+        // Inicializar com pausa
+        resetInteraction();
+      } else {
+        // Se não deve habilitar aurora, remover o container
+        const container = document.getElementById('global-aurora-container');
+        if (container) {
+          container.style.display = 'none';
+        }
+      }
     } else {
       setTimeout(initAurora, 100);
     }

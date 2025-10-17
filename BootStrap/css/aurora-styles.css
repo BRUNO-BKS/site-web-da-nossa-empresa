@@ -1,3 +1,4 @@
+/* 
 /* Estilos para o efeito de Aurora Boreal Global */
 
 /* Prevenir scroll horizontal */
@@ -67,14 +68,13 @@ section h2 {
     animation: float 6s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
+@keyframes flutuar {
+    0% {transform: translateY(0); } 
+    50% {transform: translateY(-30px);}
+    100% {transform: translateY(0);} 
+       
     }
-    50% {
-        transform: translateY(-10px);
-    }
-}
+
 
 /* Modal com transparência */
 .modal-content {
@@ -193,22 +193,7 @@ a:hover {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Animação escalonada para os cards dos fundadores */
-.founder-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.founder-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.founder-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.founder-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
+/* Cards dos fundadores sem animações */
 
 /* Prevenir overflow horizontal em todos os elementos */
 * {
@@ -235,4 +220,4 @@ img {
 .navbar {
     width: 100%;
     max-width: 100%;
-}
+} 
