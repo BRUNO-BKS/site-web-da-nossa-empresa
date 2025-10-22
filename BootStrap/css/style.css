@@ -70,7 +70,7 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    
     overflow: visible;
     position: relative;
     z-index: 2;
@@ -562,12 +562,7 @@ img {
 }
 
 /* Otimizações para sombras de texto */
-.text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    /* Otimizações de performance */
-    will-change: auto;
-    transform: translateZ(0);
-}
+
 
 /* Media queries para dispositivos com baixa performance */
 @media (prefers-reduced-motion: reduce) {
@@ -1208,6 +1203,11 @@ img {
 .founder-social {
     display: flex;
     gap: 1rem;
+}
+
+.icon-portifolio img{
+    width: 18px;
+    height: 18px;
 }
 
 .social-btn {

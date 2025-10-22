@@ -37,7 +37,7 @@ section {
 
 /* Navbar com transparência */
 .navbar {
-    background: rgba(13, 110, 253, 0.9) !important;
+    background: rgba(4, 32, 73, 0.9) !important;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }

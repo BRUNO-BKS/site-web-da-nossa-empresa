@@ -1,0 +1,122 @@
+@media (max-width: 1280px) {
+  .cabecalho {
+    padding: 30px;
+  }
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    gap: 30px;
+  }
+
+  .home .informacoes {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    gap: 30px;
+  }
+
+  .projetos .container-projetos {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .cabecalho .logo {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cabecalho h1.logo {
+    font-size: 23px;
+  }
+
+  .home .informacoes h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .home .informacoes p {
+    width: 280px;
+    font-size: 16px;
+    margin: 0px;
+  }
+
+  .home .informacoes p {
+    width: 280px;
+    font-size: 16px;
+    margin: 0px;
+  }
+
+  .home .informacoes .redes-sociais i {
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  .home .informacoes .redes-sociais i.fab.fa-github::before {
+    margin-left: -3px;
+  }
+
+  .home .informacoes .redes-sociais 
+  i.fab.fa-instagram::before, 
+  i.fab.fa-whatsapp::before {
+    margin-left: -1.4px;
+  }
+
+  .home .container-foto img {
+    max-width: 320px;
+  }
+
+  .projetos {
+    padding: 30px;
+  }
+}
+
+/* ↓ Botão seta-home fixo ↓ */
+
+.b-home{
+    position: fixed;
+    bottom: 20px;
+    right: 18px;
+    background-color: #3b0e60;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 5px; 
+    box-shadow: 0 0 10px #9443d8;
+    transition: 0.3s;
+}
+
+.b-home:hover{
+    background-color: #fff;
+    color: #9443d8;
+    box-shadow: 0 0 20px #fff;
+    transform: scale(1.05);
+}
+
+.b-home img{
+    width: 15px;
+    height: 15px;
+    filter: invert(1);
+    /* Inverte a cor da imagem (de preto para branco) */
+
+    transition: 0.3s;
+
+
+}
+
+.b-home:hover img{
+    filter: invert(0);
+    /* Inverte a cor da imagem (de branco para preto) */
+}
+
+/* Fim do botão seta-home fixo */
