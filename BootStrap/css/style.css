@@ -1591,6 +1591,7 @@ img {
 
 
 /* Responsividade para telas menores que 1000px */
+/* Ainda não está responsivo... */
 @media (max-width: 1000px) {
     .nossos-projetos {
         
