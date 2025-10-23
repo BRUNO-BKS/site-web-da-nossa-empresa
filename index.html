@@ -19,16 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     </head>
     <body>
-        
-        <div class="main-content">
-        <!-- Toast de Sucesso -->
-        <!-- <div id="toastSuccess" class="alert alert-success text-center" role="alert">
-            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/2705.png" alt="Sucesso" width="32" height="32" class="me-2 align-middle">
-            <span class="align-middle">Mensagem enviada</span>
-        </div> -->
-        
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="width: 100vw;">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="img/P.jpg" alt="Logo" width="40" height="40" class="me-2 rounded" loading="eager" decoding="async">
@@ -58,11 +49,21 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>   
+
+    <div class="main-content" style="max-width: 100%;">
+    <!-- Toast de Sucesso -->    
+    <!-- <div id="toastSuccess" class="alert alert-success text-center" role="alert">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/2705.png" alt="Sucesso" width="32" height="32" class="me-2 align-middle">
+        <span class="align-middle">Mensagem enviada</span>
+    </div> -->    
+        
+    <!-- Navbar -->
+    
 
     <!-- Hero Section -->
-    <section id="home" class="position-relative py-4" style="min-height: 100vh;">
-        <div class="container">
+    <section id="home" class="nossos-projetos position-relative py-4" style="min-height: 100vh;">
+        <div class="container" style="max-width: 80%;">
             <div class="row align-items-center" style="min-height: 80vh;">
                 <div class="col-lg-6">
                     <!-- <h2 class="display-4 fw-bold text-white text-shadow animate-in-up hero-title">Bem-vindo ao ProjectNew!</h2>
@@ -82,26 +83,26 @@
                 </div>                               
                 <div class="col-lg-6 text-center">
                     <div class="col-lg-6 text-center position-relative hero-art">
-                    <span class="float-orb orb-1" ></span>
-                    <span class="float-orb orb-2"></span>
-                    <span class="float-dot dot-1"></span>
-                    <span class="float-dot dot-2"></span>
-                    <span class="float-ring ring-1"></span>
-                    <img src="img/P.png" alt="Tecnologia" class="img-fluid rounded floating" style="max-height: 380px;" loading="lazy" decoding="async">
-                    <div class="floating-element element-1"><i class="fab fa-github" style="color: white;"></i></div>
-                    <div class="floating-element element-2"><i class="fas fa-envelope" style="color: white;"></i></div>
-                    <div class="floating-element element-3"><i class="fab fa-js" style="color: white;"></i></div>
-                    <div class="floating-element element-4"><i class="fab fa-react" style="color: white;"></i></div>
-                    <div class="floating-element element-5"><i class="fab fa-node-js" style="color: white;"></i></div>
+                        <span class="float-orb orb-1" ></span>
+                        <span class="float-orb orb-2"></span>
+                        <span class="float-dot dot-1"></span>
+                        <span class="float-dot dot-2"></span>
+                        <span class="float-ring ring-1"></span>
+                        <img src="img/P.png" alt="Tecnologia" class="img-fluid rounded floating" style="max-height: 380px;" loading="lazy" decoding="async">
+                        <div class="floating-element element-1"><i class="fab fa-github" style="color: white;"></i></div>
+                        <div class="floating-element element-2"><i class="fas fa-envelope" style="color: white;"></i></div>
+                        <div class="floating-element element-3"><i class="fab fa-js" style="color: white;"></i></div>
+                        <div class="floating-element element-4"><i class="fab fa-react" style="color: white;"></i></div>
+                        <div class="floating-element element-5"><i class="fab fa-node-js" style="color: white;"></i></div>
+                    </div>
                 </div>
-                    
             </div>
         </div>
     </section>
 
     <!-- Seção Sobre Nós -->
     <section id="sobre-nos" class="py-5">
-        <div class="container">
+        <div class="container" style="max-width: 80%;">
             <!-- Título da Seção -->
             <div class="row mb-5">
                 <div class="col-12 text-center">
@@ -242,8 +243,8 @@
     </section>
 
     <!-- Cards Section -->
-    <section id="cards" class="py-5">
-        <div class="container">
+    <section id="cards" class="py-5" style="padding: 38px 0 !important;">
+        <div class="container" style="max-width: 80%; max-height: 100vh; transform: scale(0.8); transform-origin: top center;">
             <!-- Header da Seção -->
             <div class="row mb-5">
                 <div class="col-12 text-center">
@@ -367,17 +368,9 @@
         </div>
     </section>
 
-   
-
-    
-
-    
-
-            
-           
     <!-- Seção de Localização -->
-    <section id="localizacao" class="py-4" >
-        <div class="container">
+    <section id="localizacao" class="nossa-localizacao py-4" style="padding: 30px 0 50px 0 !important;">
+        <div class="container" style="max-width: 90%; max-height: 100vh; transform: scale(0.85); transform-origin: top center;">
             <div class="row mb-5">
                 <div class="col-12 text-center">
                     <div class="section-header">
@@ -396,7 +389,7 @@
                         <div class="card-header bg-primary text-white">
                             <h5 class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>Endereço</h5>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" style="height: 500px; font-size: 1.025rem;">
                             <div class="mb-3 text-white">
                                 <h6><i class="fas fa-building me-2 text-primary"></i>ProjectNew</h6>
                                 <p class="mb-1">AV. Carlos Gomes, 2510</p>
@@ -429,10 +422,10 @@
                         <div class="card-body p-0">
                             <!-- Mapa do Google Maps -->
                             <div class="map-container">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1394.1897715373373!2d-63.91078990625289!3d-8.75176461185635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325cd455dd617f%3A0xc32a15bc78d82706!2sSenac%20Rond%C3%B4nia%20(Esplanada)!5e0!3m2!1spt-BR!2sbr!4v1761093110937!5m2!1spt-BR!2sbr" 
-                                    width="700" 
-                                    height="450" 
-                                    style="border:0;" 
+                                <iframe style src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1394.1897715373373!2d-63.91078990625289!3d-8.75176461185635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325cd455dd617f%3A0xc32a15bc78d82706!2sSenac%20Rond%C3%B4nia%20(Esplanada)!5e0!3m2!1spt-BR!2sbr!4v1761093110937!5m2!1spt-BR!2sbr" 
+                                    width="100%" 
+                                    height="500" 
+                                    style="border:0" 
                                     allowfullscreen="" 
                                     loading="lazy" 
                                     referrerpolicy="no-referrer-when-downgrade">
@@ -445,9 +438,9 @@
 
             <!-- Modals -->
             <div class="row mb-5">
-                <div class="col-12">
+                <div class="col-12" style="display: flex; justify-content: center; align-items: center;">
                     <h4></h4>
-                    <button type="button" class="btn btn-primary btn-lg pulse" data-bs-toggle="modal" data-bs-target="#faleConoscomodal" style="margin-left: 520px;">
+                    <button type="button" class="btn btn-primary btn-lg pulse" data-bs-toggle="modal" data-bs-target="#faleConoscomodal">
                         <i class="fas fa-envelope me-2"></i>Entre em Contato
                     </button>
                 </div>
@@ -481,7 +474,7 @@
                             <label for="modalMensagem" class="form-label" style="color: white;">Mensagem</label>
                             <textarea class="form-control" id="modalMensagem" rows="4" placeholder="Sua mensagem aqui..." required></textarea>
                         </div>
-                        <div class="modal-footer justify-content-center">
+                        <div class="modal-footer justify-content-center" >
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                             <button type="submit" class="btn btn-primary" target="_blank">Salvar</button>
                         </div>
@@ -500,12 +493,12 @@
     </div>
 
         <!-- Portfolio Section -->
-    <section id="portfolio" class="py-6">
-        <div class="container">
+    <section id="portfolio" class="fundadores py-6" style="padding: 34px 0 !important;">
+        <div class="container" style="max-width: 80%; max-height: 100vh; transform: scale(0.85); transform-origin: top center;">
             <!-- Header da Seção -->
             <div class="row mb-5">
                 <div class="col-12 text-center">
-                    <div class="section-header">
+                    <div class="section-header" style="margin-bottom: 10px;">
                         <span class="section-badge">Nossa Equipe</span>
                         <h2 class="section-title">Fundadores do ProjectNew</h2>
                         <div class="title-underline"></div>
@@ -514,7 +507,7 @@
             </div>
 
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" style="padding-bottom: 30px;">
                     <a href="PortFólios/Diretor/index.html" class="card-link" target="_blank">
                         <div class="founder-card-modern">
                             <div class="founder-image">
@@ -552,7 +545,7 @@
                     </a>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" style="padding-bottom: 30px;">
                     <div class="founder-card-modern">
                         <div class="founder-image">
                             <img src="img/Bruno.jpg" alt="Bruno Souza - Gerente" loading="lazy" decoding="async">
@@ -588,7 +581,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" style="padding-bottom: 30px;">
                     <div class="founder-card-modern">
                         <div class="founder-image">
                             <img src="img/Gabriel.jpg" alt="Gabriel Oliveira - Secretário" loading="lazy" decoding="async">
@@ -624,7 +617,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" style="padding-bottom: 30px;">
                     <div class="founder-card-modern">
                         <div class="founder-image">
                             <img src="img/Joao.jpg" alt="João Guilherme - Desenvolvedor" loading="lazy" decoding="async">
@@ -669,8 +662,10 @@
 </div>
 </section>
 
+
+
 <!-- Footer -->
-<footer class="bg-dark text-light py-3">
+<footer class="footer bg-dark text-light py-3" style="width: 100vw;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 text-center">

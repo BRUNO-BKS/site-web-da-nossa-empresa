@@ -1,10 +1,16 @@
 body {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
-    margin: 0;
+    margin: auto;
     padding: 0;
+    /* max-width: 80%; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 /* Estilos customizados para o site Bootstrap */
 /* Smooth scroll */
@@ -708,7 +714,7 @@ section {
 }
 
 /* Responsividade para a seção de localização */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     #localizacao .map-container iframe {
         height: 250px;
     }
@@ -1580,5 +1586,25 @@ img {
     
     .floating {
         animation-duration: 8s;
+    }
+}
+
+
+/* Responsividade para telas menores que 1000px */
+@media (max-width: 1000px) {
+    .nossos-projetos {
+        
+    }
+
+    .nossa-localizacao {
+
+    }
+
+    .fundadores {
+
+    }
+
+    .footer {
+
     }
 }
