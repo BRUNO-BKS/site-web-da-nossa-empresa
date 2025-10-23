@@ -44,6 +44,97 @@ html {
     z-index: 1;
 }
 
+/* Estilos para o título principal */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.typing-text {
+    position: relative;
+    display: inline-block;
+}
+
+.typing-text::after {
+    content: '|';
+    position: absolute;
+    right: -15px;
+    color: #4facfe;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards 0.8s;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Efeito de pulso para os botões */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-cto .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
 /*icons de animação*/
 .floating-element.element-1 {
     top: 8%;
@@ -92,6 +183,85 @@ html {
     animation: 7s ease-in-out 0s infinite normal none running floatXY;
 }
 
+.hero-art {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+/* Estilos para os elementos flutuantes */
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-orb, .float-dot, .float-ring {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.float-orb {
+  width: 100px;
+  height: 100px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.float-orb.orb-1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.float-orb.orb-2 {
+  bottom: 20%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.float-dot {
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: float 4s ease-in-out infinite;
+}
+
+.float-dot.dot-1 {
+  top: 30%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.float-dot.dot-2 {
+  bottom: 30%;
+  left: 15%;
+  animation-delay: 1.5s;
+}
+
+.float-ring {
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  animation: spin 20s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilo para os elementos com ícones */
+.floating-element {
+  position: absolute;
+  font-size: 24px;
+  animation: float 5s ease-in-out infinite;
+}
+
+.floating-element.element-1 { top: 10%; left: 20%; animation-delay: 0s; }
+.floating-element.element-2 { top: 20%; right: 20%; animation-delay: 1s; }
+.floating-element.element-3 { bottom: 30%; left: 15%; animation-delay: 2s; }
+.floating-element.element-4 { bottom: 20%; right: 15%; animation-delay: 3s; }
+.floating-element.element-5 { top: 50%; left: 75%; transform: translate(-50%, -50%); animation: spin 15s linear infinite; }
+
 /* INTRODUÇÃO BEM-VINDO AO PROJECTNEW*/
 .col-lg-6 h2{
     text-align: left;
@@ -127,8 +297,7 @@ html {
 }
 
 /* Hero section */
-.row {
-    height: ;
+.row {  
     width: 100%;
 }
 
@@ -262,6 +431,41 @@ html {
     border-radius: 0 0 0.5rem 0.5rem;
 }
 
+.card-link {    
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+}
+
+/* Garante que os links dentro do card não herdem o efeito de hover */
+.card-link:hover .founder-card-modern {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Estilo para quando o card for clicado */
+.card-link:active {
+    transform: translateY(0);
+}
+
+/* Garante que os links de redes sociais funcionem independentemente */
+.social-btn {
+    position: relative;
+    z-index: 2;
+}
+
+/* Adiciona um indicador visual de que o card é clicável */
+.founder-card-modern {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
 /* Conteúdo principal */
 .main-content {
     flex: 1;
@@ -269,7 +473,7 @@ html {
 
 /* Footer */
 footer {
-    background-color: #343a40 !important;
+    background-color: #000000f0 !important;
     margin-top: auto;
 }
 
@@ -602,7 +806,23 @@ img {
     50% {
         transform: translateY(-20px) translateZ(0);
     }
+    100% {
+        transform: translateY(0px) translateZ(0);
+    }
 }
+
+@keyframes spin {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) translateZ(0);
+    }
+    50% {
+        transform: translateY(-20px) translateX(-20px) translateZ(0);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) translateZ(0);
+    }
+}
+
 
 /* Otimizações para sombras de texto */
 
