@@ -16,13 +16,6 @@ html {
     text-rendering: optimizeLegibility;
 }
 
-/* Hero Section com mesmo estilo da seção Sobre Nós */
-#home {
-    background: linear-gradient(135deg, rgba(15, 30, 60, 0.95) 0%, rgba(30, 60, 114, 0.95) 25%, rgba(42, 82, 152, 0.95) 50%, rgba(30, 60, 114, 0.95) 75%, rgba(15, 30, 60, 0.95) 100%);
-    position: relative;
-    overflow: hidden;
-}
-
 #home::before {
     content: '';
     position: absolute;
@@ -31,11 +24,13 @@ html {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(49, 30, 88, 0) 0%, transparent 50%);
     z-index: 1;
 }
+/* background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.072) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.093) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0) 0%, transparent 50%); */
 
 #home::after {
     content: '';
@@ -47,6 +42,54 @@ html {
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
     opacity: 0.2;
     z-index: 1;
+}
+
+/*icons de animação*/
+.floating-element.element-1 {
+    top: 8%;
+    right: 18%;
+    animation-delay: 0s;
+}
+
+.floating-element.element-2 {
+    top: 36%;
+    right: 6%;
+    animation-delay: 0.6s;
+}
+.floating-element.element-3 {
+    top: 64%;
+    left: 18%;
+    animation-delay: 1.2s;
+}
+.floating-element.element-4 {
+    top: 82%;
+    left: 6%;
+    animation-delay: 1.8s;
+}
+.floating-element.element-5 {
+    top: 10%;
+    left: 82%;
+    animation-delay: 2.4s;
+}
+
+.floating-element {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    color: rgb(165, 200, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 20px, rgba(96, 165, 250, 0.15) 0px 0px 18px;
+    z-index: 3;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.12);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(96, 165, 250, 0.45);
+    border-image: initial;
+    animation: 7s ease-in-out 0s infinite normal none running floatXY;
 }
 
 /* INTRODUÇÃO BEM-VINDO AO PROJECTNEW*/
@@ -581,38 +624,6 @@ img {
     }
 }
 
-/* Estilos aprimorados para a seção Sobre Nós */
-#sobre-nos {
-    background: linear-gradient(135deg, rgba(15, 30, 60, 0.95) 0%, rgba(30, 60, 114, 0.95) 25%, rgba(42, 82, 152, 0.95) 50%, rgba(30, 60, 114, 0.95) 75%, rgba(15, 30, 60, 0.95) 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-#sobre-nos::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
-    z-index: 1;
-}
-
-#sobre-nos::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.2;
-    z-index: 1;
-}
 
 /* Header da Seção */
 .section-header {
