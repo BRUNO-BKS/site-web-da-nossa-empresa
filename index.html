@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" type="text/css" href="BootStrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="BootStrap/css/style.css">
+    <link rel="stylesheet" href="BootStrap/css/botao-home.css">
     <link rel="stylesheet" type="text/css" href="BootStrap/css/toast.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -776,12 +777,22 @@
         document.addEventListener('DOMContentLoaded', function() {
         const card = document.querySelector('.card-link');
         card.addEventListener('click', function(e) {
-        console.log('Card clicado!');
+            console.log('Card clicado!');
         // O navegador seguirá o link automaticamente
-            });
-        });
+    });
+});
     </script>
 
+    <!-- BTN HOME DO JÃO 😎 -->
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- JS DO BTN DO JÃO 😎 -->
+    <script src="js/botao-home.js"></script>
+    
     <!-- CANVAS DO JÃO 😎 -->
     <canvas id="techCanvas" 
         style="
@@ -819,6 +830,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500);
 });
 </script>
+
     </body>
 </html>
 </html>
